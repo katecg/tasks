@@ -25,27 +25,7 @@ function App(): React.JSX.Element {
             >
                 Log Hello World
             </Button>
-            <Container
-                style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginTop: "20px",
-                }}
-            >
-                <div
-                    style={{
-                        width: "100px",
-                        height: "200px",
-                        backgroundColor: "red",
-                    }}
-                ></div>
-                <div
-                    style={{
-                        width: "100px",
-                        height: "200px",
-                        backgroundColor: "red",
-                    }}
-                ></div>
+            <Container>
                 <div
                     style={{
                         width: "100px",
