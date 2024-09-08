@@ -20,32 +20,12 @@ function App(): React.JSX.Element {
             </ul>
             <Button
                 onClick={() => {
-                    console.log("I am logged");
+                    console.log("Hello World!");
                 }}
             >
                 Log Hello World
             </Button>
-            <Container
-                style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    marginTop: "20px",
-                }}
-            >
-                <div
-                    style={{
-                        width: "100px",
-                        height: "200px",
-                        backgroundColor: "red",
-                    }}
-                ></div>
-                <div
-                    style={{
-                        width: "100px",
-                        height: "200px",
-                        backgroundColor: "red",
-                    }}
-                ></div>
+            <Container>
                 <div
                     style={{
                         width: "100px",
