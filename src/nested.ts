@@ -2,7 +2,6 @@ import { Answer } from "./interfaces/answer";
 import { Question, QuestionType } from "./interfaces/question";
 import { makeBlankQuestion } from "./objects";
 import { duplicateQuestion } from "./objects";
-import { addOption } from "./objects";
 
 /**
  * Consumes an array of questions and returns a new array with only the questions
@@ -213,39 +212,28 @@ export function editOption(
 ): Question[] {
     const index = questions.findIndex((question) => question.id === targetId);
 
-    export function editOption(
-        questions: Question[],
-        targetId: number,
-        targetOptionIndex: number,
-        newOption: string,
-    ): Question[] {
-        const index = questions.findIndex(
-            (question) => question.id === targetId,
-        );
-
-        return index !== -1 ?
-                [
-                    ...questions.slice(0, index),
-                    {
-                        ...questions[index],
-                        options:
-                            targetOptionIndex === -1 ?
-                                [...questions[index].options, newOption]
-                            :   [
-                                    ...questions[index].options.slice(
-                                        0,
-                                        targetOptionIndex,
-                                    ),
-                                    newOption,
-                                    ...questions[index].options.slice(
-                                        targetOptionIndex + 1,
-                                    ),
-                                ],
-                    },
-                    ...questions.slice(index + 1),
-                ]
-            :   questions;
-    }
+    return index !== -1 ?
+            [
+                ...questions.slice(0, index),
+                {
+                    ...questions[index],
+                    options:
+                        targetOptionIndex === -1 ?
+                            [...questions[index].options, newOption]
+                        :   [
+                                ...questions[index].options.slice(
+                                    0,
+                                    targetOptionIndex,
+                                ),
+                                newOption,
+                                ...questions[index].options.slice(
+                                    targetOptionIndex + 1,
+                                ),
+                            ],
+                },
+                ...questions.slice(index + 1),
+            ]
+        :   questions;
 }
 
 /***
