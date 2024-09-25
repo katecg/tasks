@@ -22,7 +22,7 @@ export function StartAttempt(): React.JSX.Element {
         <div>
             <p>Attemps Remaining: {attempts}</p>
 
-            <Button onClick={startQuiz} disabled={inProgess || attempts == 0}>
+            <Button onClick={startQuiz} disabled={inProgess || attempts === 0}>
                 Start Quiz
             </Button>
             <Button onClick={stopQuiz} disabled={!inProgess}>
