@@ -25,6 +25,10 @@ export function TwoDice(): React.JSX.Element {
 
     return (
         <div>
+            <div>
+                <span data-testid="left-die">{leftDie}</span>
+                <span data-testid="right-die">{rightDie}</span>
+            </div>
             <Button onClick={rollLeft}>Roll left</Button>
             <Button onClick={rollRight}>Roll right</Button>
 
