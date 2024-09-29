@@ -1,6 +1,16 @@
 import React from "react";
 import "./App.css";
-import { Button, Container } from "react-bootstrap";
+import { Counter } from "./components/Counter";
+import { ChangeType } from "./components/ChangeType";
+import { RevealAnswer } from "./components/RevealAnswer";
+import { StartAttempt } from "./components/StartAttempt";
+import { TwoDice } from "./components/TwoDice";
+import { CycleHoliday } from "./components/CycleHoliday";
+//import { Counter } from "./components/Counter";
+import { DoubleHalf } from "./bad-components/DoubleHalf";
+import { ColoredBox } from "./bad-components/ColoredBox";
+import { ShoveBox } from "./bad-components/ShoveBox";
+import { ChooseTeam } from "./bad-components/ChooseTeam";
 
 function App(): React.JSX.Element {
     return (
@@ -8,32 +18,32 @@ function App(): React.JSX.Element {
             <header className="App-header">
                 UD CISC275 with React Hooks and TypeScript
             </header>
-            <p>Kate Geiszler</p>
-            <p>Hello World</p>
-            <h1>Toby the Raccoon</h1>
-            <img src="https://shorturl.at/hSriG" alt="A Picture of a Raccoon" />
-            <p>Tobys favorites things To Do</p>
-            <ul>
-                <li>Sudoku</li>
-                <li>Eating</li>
-                <li>Sleeping</li>
-            </ul>
-            <Button
-                onClick={() => {
-                    console.log("Hello World!");
-                }}
-            >
-                Log Hello World
-            </Button>
-            <Container>
-                <div
-                    style={{
-                        width: "100px",
-                        height: "200px",
-                        backgroundColor: "red",
-                    }}
-                ></div>
-            </Container>
+            <hr></hr>
+            <DoubleHalf></DoubleHalf>
+            <hr></hr>
+            <ChooseTeam></ChooseTeam>
+            <hr></hr>
+            <ColoredBox></ColoredBox>
+            <hr></hr>
+            <ShoveBox></ShoveBox>
+            <hr></hr>
+            <Counter></Counter>
+            <hr />
+            <hr></hr>
+            <ChangeType></ChangeType>
+            <hr />
+            <hr></hr>
+            <RevealAnswer></RevealAnswer>
+            <hr />
+            <hr></hr>
+            <StartAttempt></StartAttempt>
+            <hr />
+            <hr></hr>
+            <TwoDice></TwoDice>
+            <hr />
+            <hr></hr>
+            <CycleHoliday></CycleHoliday>
+            <hr />
         </div>
     );
 }
